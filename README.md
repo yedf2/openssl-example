@@ -14,3 +14,12 @@ usage
 
 ./sync-ssl-cli www.openssl.com 443
 
+comments
+====
+
+those examples demostrate how to write sync/async openssl programs
+
+email
+====
+
+dongfuye at 163 dot com
