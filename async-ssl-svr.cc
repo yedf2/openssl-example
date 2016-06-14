@@ -190,6 +190,10 @@ void handleDataRead(Channel* ch) {
         delete ch;
         return;
     }
+    if (rd == 0) {
+        log("No more data to read from socket\n");
+        delete ch;
+    }
 }
 
 void handleRead(Channel* ch) {
