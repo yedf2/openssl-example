@@ -191,7 +191,10 @@ void handleDataRead(Channel* ch) {
         return;
     }
     if (rd == 0) {
-        log("No more data to read from socket\n");
+        if (ssle == SSL_ERROR_ZERO_RETURN)
+            log("SSL has been shutdown.\n");
+        else
+            log("Connection has been aborted.\n");
         delete ch;
     }
 }
